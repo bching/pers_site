@@ -1,0 +1,50 @@
+body {
+	font-size: 100%;
+	font-family: "Droid Sans", sans-serif;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+a span {
+	transition: all 100ms ease-in-out;
+	text-decoration: none;
+}
+a span:hover {
+	font-size: 1.25rem;
+	color: purple;
+}
+
+.main-content .centered-text {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*margin-top: -50px;
+	margin-left: -100px;*/
+}
+
+.about-panel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	visibility: hidden;
+}
+.about-panel::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+}
+
+.about-panel.is-visible {
+	visibility: visible;
+}
+
+.about-panel.is-visible::after {
+	background: rgba(251, 243, 169, 0.7);
+}

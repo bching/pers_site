@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" href="test-css.css" type="text/css" />
+	<script>
+		function click(div){
+			var className = div.getAttribute("class");
+			if(className == "trigger"){
+				div.className = "active";
+				} else{
+				div.className = "trigger";
+			}
+		}
+	</script>
+</head>
+<body>
+<div class="trigger">
+	<div class="box"></div>
+</div>
+</body>
+</html>

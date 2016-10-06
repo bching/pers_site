@@ -1,0 +1,203 @@
+.home-wrap header {
+	width: 135px;
+	/*background-color: rgba(25, 41, 202, 0.4);*/
+	/*background-color: #FFF;*/
+	padding: 30px 0;
+}
+
+.home-wrap header .header-position {
+	position: fixed;
+	top: 30px;
+	/*bottom: 30px;*/
+	bottom: 30vh;
+	width: 135px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.home-wrap header .header-position .logo {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 135px;
+	background-color: #FFF;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url("../images/avatar-inside-a-circle.svg");
+	background-position: center;
+	margin: 0;
+	padding: 0;
+	height: 80px;
+}
+
+.home-wrap header .header-position .site-nav ul {
+	list-style: none;
+	margin: 20px 0;
+	padding: 0 20px 0 0;
+	text-align: right;
+}
+
+.home-wrap header .header-position .site-nav ul li{
+	margin-bottom: 10px;
+}
+
+.home-wrap header .header-position .site-nav .email-link {
+	display: block;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.home-wrap header .header-position .mobile-nav-toggle {
+	display: none;
+	height: 50px;
+	width: 50px;
+	background: #FFFFFF;
+	margin-right: 20px;
+	/*display: flex;*/
+	align-items: center;
+	cursor: pointer;
+}
+
+.home-wrap header .header-position .mobile-nav-toggle #triangle{
+	/*position: absolute;*/
+	height: 0;
+	width: 0;
+	/*margin-left: 25px;*/
+	/*top: 0;
+	left: 25px;*/
+	transition: all 600ms cubic-bezier(1, 0, 0.5, 1.5) 500ms;
+	/*transition-duration: 600ms;
+	transition-timing-function: ease-in-out;
+	transition-delay: 500ms;*/
+	border-width: 0;
+	border-color: transparent;
+	border-style: solid;
+	/*margin-right: 20px;
+	border-top: 40px solid #FFFFFF;
+	border-left: 40px solid #FFFFFF;
+	border-right: 40px solid #FFFFFF;
+	border-bottom: 0;*/
+	/*z-index: 2;*/
+}
+
+.home-wrap header .header-position .mobile-nav-toggle
+#lines,
+#lines:before,
+#lines:after {
+	display: block;
+	content: "";
+	height: 2px;
+	width: 100%;
+	background: #333;
+	position: relative;
+	transition: all 500ms cubic-bezier(1, 0, 0, 1);
+	/*z-index: 1;*/
+}
+
+.home-wrap header .header-position .mobile-nav-toggle #lines:before {
+	top: 15px;
+}
+
+.home-wrap header .header-position .mobile-nav-toggle #lines:after {
+	bottom: 17px;
+}
+
+.home-wrap header .header-position .mobile-nav-toggle:hover
+#lines {
+	/*-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);*/
+	/*transform: translateY(-5px);*/
+	/*transform: skew(-25deg, -25deg);*/
+	/*transform-origin: left 25px;*/
+	/*border-radius: 1px;*/
+	/*border-top-width: 16px;*/
+	/*border-radius: 200px 200px 0 0;*/
+	/*border-top: 16px solid;*/
+	background: transparent;
+	/*position: absolute;*/
+}
+
+.home-wrap header .header-position .mobile-nav-toggle:hover #lines:before {
+	background: transparent;
+}
+
+.home-wrap header .header-position .mobile-nav-toggle:hover #lines:after {
+	background: transparent;
+}
+
+.home-wrap header .header-position .mobile-nav-toggle:hover #triangle {
+	/*height: 50px;
+	width: 50px;*/
+	/*border-top: 25px;
+	border-left: 30px;
+	border-right: 30px;
+	border-bottom: 0;*/
+	/*top: 100%;
+	margin-top: -100px;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*transform: rotate(180deg);*/
+	transform: translate(0, 10px);
+	border-width: 30px 25px 0 25px;
+	border-color: #0458b3 transparent transparent transparent;
+	border-style: solid;
+}
+
+.home-wrap .mobile-nav {
+	display: none;
+	position: absolute;
+	width: 100%;
+	background: white;
+	padding: 30px 0 20px;
+	transform: translateY(-100%);
+	transition: all 4s ease-in-out;
+}
+
+.home-wrap .mobile-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.home-wrap .mobile-nav li {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 775px) {
+	.home-wrap header {
+		width: auto;
+		padding: 20px 0;
+	}
+
+	.home-wrap header .header-position {
+		width: auto;
+		position: relative;
+		top: auto;
+		bottom: auto;
+		left: auto;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.home-wrap header .header-position .site-nav, .email-link {
+		display: none;
+	}
+
+	.home-wrap header .header-position .logo {
+		/*left: 20px;*/
+		/*display: flex;*/
+		height: 50px;
+	}
+
+	.home-wrap header .header-position .mobile-nav-toggle {
+		display: flex;
+	}
+
+	.home-wrap .mobile-nav.is-open {
+		display: block;
+		transform: translateY(0%);
+	}
+
+}
